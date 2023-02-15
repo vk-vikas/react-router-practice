@@ -8,6 +8,8 @@ import New from "./pages/New";
 import NoMatch from "./pages/NoMatch";
 import OrderSummary from "./pages/OrderSummary";
 import Products from "./pages/Products";
+import UserDetails from "./pages/UserDetails";
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
 
         {/* this is shown when path does matches any defined path */}
         <Route path="*" element={<NoMatch />} />
+
+        <Route path="users" element={<Users />}/>
+        <Route path="users/:id" element={<UserDetails/>}/>
       </Routes>
     </div>
   );
